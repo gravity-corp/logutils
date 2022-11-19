@@ -9,7 +9,7 @@ import (
 func TestLevel(t *testing.T) {
 	buf := bytes.Buffer{}
 
-	lvl := &Level{
+	lvl := Level{
 		Filter: map[string]struct{}{"DEBUG": {}},
 		Writer: &buf,
 	}

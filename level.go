@@ -12,7 +12,7 @@ type Level struct {
 	Writer io.Writer
 }
 
-func (lvl *Level) Write(p []byte) (n int, err error) {
+func (lvl Level) Write(p []byte) (n int, err error) {
 	x := bytes.IndexByte(p, '[')
 	if x < 0 {
 		return len(p), nil
